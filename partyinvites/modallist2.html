@@ -1,0 +1,52 @@
+    {{define "body"}}
+    <div class="container">
+        <div class="header">
+            <h5>
+                  Bootstrap Modal Via JavaScript
+              </h5>
+        </div>
+
+        <button class="btn btn-success" 
+                onclick="showModal1()">
+            Show Modal1-modalist
+        </button>
+
+        <div id="gfg" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            GeeksforGeeks
+                        </h5>
+                        <button type="button" 
+                                class="btn-close"
+                                data-bs-dismiss="modal" 
+                                aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            It is a dialog box/popup window that is
+                            displayed on top of the current page.
+                            modallist2
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" 
+                                class="btn btn-secondary" 
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let modal = 
+            new bootstrap.Modal(document.getElementById('gfg'));
+        function showModal1() {
+            modal.show();
+        }
+    </script>
+{{ end }}

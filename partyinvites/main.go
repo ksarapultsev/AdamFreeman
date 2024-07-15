@@ -15,7 +15,7 @@ var responses = make([]*Rsvp, 0, 10)
 var templetes = make(map[string]*template.Template, 3)
 
 func loadTempLates() {
-	templateNames := [5]string{"welcome", "form", "thanks", "sorry", "list"}
+	templateNames := [6]string{"welcome", "form", "thanks", "sorry", "list", "modallist2"}
 	for index, name := range templateNames {
 		t, err := template.ParseFiles("layout.html", name+".html")
 		if err == nil {
@@ -29,6 +29,9 @@ func loadTempLates() {
 
 func welcomeHandler(writer http.ResponseWriter, request *http.Request) {
 	templetes["welcome"].Execute(writer, nil)
+}
+func modallistHandler(writer http.ResponseWriter, request *http.Request) {
+	templetes["modallist2"].Execute(writer, nil)
 }
 
 func listHandler(writer http.ResponseWriter, request *http.Request) {
@@ -88,8 +91,9 @@ func main() {
 	http.HandleFunc("/", welcomeHandler)
 	http.HandleFunc("/list", listHandler)
 	http.HandleFunc("/form", formHandler)
+	http.HandleFunc("/modallist2", modallistHandler)
 
-	err := http.ListenAndServe(":5001", nil)
+	err := http.ListenAndServe(":80", nil)
 	if err != nil {
 		fmt.Println(err)
 	}

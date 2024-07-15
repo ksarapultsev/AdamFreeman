@@ -2,9 +2,147 @@
     <div class="text-center">
         <h3>We`re going to have an exciting party!</h3>
         <h4> And you are invited!</h4>
-        <a class="btn btn-primary" href="/form">
+        <a class="btn btn-success" href="/form">
             RSVP now
         </a>
+        <a class="btn btn-success" href="/modallist2">
+            Modalist2
+        </a>
     </div>
+    <div class="text-center">
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+     </div>  
+     <div class="mx-2 p-2 m-2">
+     
+        <p><h5>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut facilis, illo nam deleniti assumenda voluptatum rerum possimus consequuntur repudiandae quae, rem repellat nostrum provident eius quos maiores cum consequatur unde!
+        </h5>
+        </p>
+        </div> 
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+            <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+          </div>
+    <div>-----------------------------------------------------------------------------------------</div>
 
+    <div class="container1">
+      <div class="header">
+          <h5>
+                Bootstrap Modal Via JavaScript - TheKoS ver.2.2
+            </h5>
+    
+
+      <button class="btn btn-success m-2" 
+              onclick="showModal()">
+              Show Modal-пред
+      </button>
+ 
+      <div id="gfg" class="modal" tabindex="-1">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">
+                          GeeksforGeeks
+                      </h5>
+                      <button type="button" 
+                              class="btn-close"
+                              data-bs-dismiss="modal" 
+                              aria-label="Close">
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p>
+                          It is a dialog box/popup window that is
+                          displayed on top of the current page. Create by TheKoS
+                      </p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" 
+                              class="btn btn-secondary" 
+                              data-bs-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      let modal = 
+          new bootstrap.Modal(document.getElementById('gfg'));
+      function showModal() {
+          modal.show();
+      }
+  </script>
+  <!-- Button trigger modal -->
+<div><button class="btn btn-success" 
+              onclick="showModal1()">
+              Show Modal1-грамота1
+</button>
+</div>
+
+
+<!-- Modal -->
+ <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title - Предупреждение</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>ERROR-modal1-Close -modal</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        <button type="button" 
+                              class="btn btn-secondary" 
+                              data-bs-dismiss="modal">
+                          Close-2
+                      </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title - Предупреждение-Modal2</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>ERROR-modal2</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close-modal1</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let modal1 = 
+      new bootstrap.Modal(document.getElementById('exampleModal2'));
+  function showModal1() {
+      modal1.show();
+  }
+</script> 
 {{ end }}
